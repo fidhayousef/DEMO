@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register form</title>
+</head>
+<body style="background-color:pink;">
+<h1> REGISTRATION  FORM</h1>
+<form action="register" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="enter your username"><br>
+    <input type="date" name="dob" placeholder="enter your date of birth"><br>
+    <input type="text" name="age" placeholder="enter your age"><br>
+     <input type="text" name="phone_number" placeholder="enter your phone number"><br>
+    <label>gender</label><br>
+  <input type="radio" name="male"> MALE<br>
+    <input type="radio" name="female">FEMALE<br>
+    <input type="email" name="email" placeholder="enter your email address"><br>
+    <input type="text" name="address" placeholder="enter your address here"><br>
+    <label>DEPARTMENT</label><br>
+  <input type="radio" name="commerce"> COMMERCE<br>
+    <input type="radio" name="physics">PHYSICS<br>
+  <input type="radio" name="psychology">PSYCHOLOGY<br>
+    <input type="radio" name="chemistry">CHEMISTRY<br>
+    <label>PURPOSE</label><br>
+  <input type="radio" name="enquiry"> ENQUIRY<br>
+    <input type="radio" name="place_order">PLACE ORDER<br>
+    <input type="radio" name="return">RETURN<br>
+    <label>MATERIALS PROVIDE</label><br>
+  <input type="" name="pen"> PEN<br>
+    <input type="radio" name="pencil">PENCIL<br>
+  <input type="radio" name="exam_paper">EXAM PAPER<br>
+    <input type="radio" name="notebook">NOTEBOOK<br>
+    <input type="submit">
+</form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</body>
+</html>

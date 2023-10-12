@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>department</title>
+</head>
+<body style="background-color:pink;">
+<h1> DEPARTMENT </h1>
+<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Department
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'commerce' %}">commerce</a></li>
+<!--            <li><hr class="dropdown-divider"></li>-->
+            <li><a class="dropdown-item" href="{% url 'psychology' %}">psychology</a></li>
+              <li><a class="dropdown-item" href="{% url 'physics' %}">physics</a></li>
+<!--              <li><hr class="dropdown-divider"></li>-->
+              <li><a class="dropdown-item" href="{% url 'chemistry' %}">chemistry</a></li>
+          </ul>
+        </li>
+
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</body>
+</html>
+
